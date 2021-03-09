@@ -2,6 +2,8 @@ Archive member included because of file (symbol)
 
 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
                               c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o (exit)
+c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./main.o (__do_clear_bss)
 
 Memory Configuration
 
@@ -113,7 +115,7 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000       0xac
+.text           0x00000000      0x172
  *(.vectors)
  .vectors       0x00000000       0x68 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
                 0x00000000                __vectors
@@ -151,6 +153,8 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
  *(.init3)
  *(.init3)
  *(.init4)
+ .init4         0x00000074       0x10 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000074                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -161,48 +165,52 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x00000074        0x8 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+ .init9         0x00000084        0x8 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
  *(.init9)
  *(.text)
- .text          0x0000007c        0x4 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
-                0x0000007c                __vector_22
-                0x0000007c                __vector_1
-                0x0000007c                __vector_24
-                0x0000007c                __vector_12
-                0x0000007c                __bad_interrupt
-                0x0000007c                __vector_6
-                0x0000007c                __vector_3
-                0x0000007c                __vector_23
-                0x0000007c                __vector_25
-                0x0000007c                __vector_11
-                0x0000007c                __vector_13
-                0x0000007c                __vector_17
-                0x0000007c                __vector_19
-                0x0000007c                __vector_7
-                0x0000007c                __vector_5
-                0x0000007c                __vector_4
-                0x0000007c                __vector_9
-                0x0000007c                __vector_2
-                0x0000007c                __vector_21
-                0x0000007c                __vector_15
-                0x0000007c                __vector_8
-                0x0000007c                __vector_14
-                0x0000007c                __vector_10
-                0x0000007c                __vector_16
-                0x0000007c                __vector_18
-                0x0000007c                __vector_20
- .text          0x00000080        0x0 ./main.o
- .text          0x00000080        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00000080                . = ALIGN (0x2)
+ .text          0x0000008c        0x4 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+                0x0000008c                __vector_22
+                0x0000008c                __vector_1
+                0x0000008c                __vector_24
+                0x0000008c                __vector_12
+                0x0000008c                __bad_interrupt
+                0x0000008c                __vector_6
+                0x0000008c                __vector_3
+                0x0000008c                __vector_23
+                0x0000008c                __vector_25
+                0x0000008c                __vector_11
+                0x0000008c                __vector_13
+                0x0000008c                __vector_17
+                0x0000008c                __vector_19
+                0x0000008c                __vector_7
+                0x0000008c                __vector_5
+                0x0000008c                __vector_4
+                0x0000008c                __vector_9
+                0x0000008c                __vector_2
+                0x0000008c                __vector_21
+                0x0000008c                __vector_15
+                0x0000008c                __vector_8
+                0x0000008c                __vector_10
+                0x0000008c                __vector_16
+                0x0000008c                __vector_18
+                0x0000008c                __vector_20
+ .text          0x00000090        0x0 ./main.o
+ .text          0x00000090        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000090        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000090                . = ALIGN (0x2)
  *(.text.*)
- .text.main     0x00000080       0x28 ./main.o
-                0x00000080                main
- .text.libgcc   0x000000a8        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000000a8                . = ALIGN (0x2)
+ .text.__vector_14
+                0x00000090       0x56 ./main.o
+                0x00000090                __vector_14
+ .text.main     0x000000e6       0x88 ./main.o
+                0x000000e6                main
+ .text.libgcc   0x0000016e        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000016e        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000016e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000000a8        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x000000a8                exit
-                0x000000a8                _exit
+ .fini9         0x0000016e        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000016e                exit
+                0x0000016e                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -221,16 +229,17 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000000a8        0x4 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000016e        0x4 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000000ac                _etext = .
+                0x00000172                _etext = .
 
-.data           0x00800100        0x0 load address 0x000000ac
+.data           0x00800100        0x0 load address 0x00000172
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
  .data          0x00800100        0x0 ./main.o
  .data          0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  *(.data*)
  *(.rodata)
  *(.rodata*)
@@ -239,24 +248,27 @@ LOAD c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.
                 0x00800100                _edata = .
                 0x00800100                PROVIDE (__data_end, .)
 
-.bss            0x00800100        0x0
+.bss            0x00800100        0x4
                 0x00800100                PROVIDE (__bss_start, .)
  *(.bss)
  .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
  .bss           0x00800100        0x0 ./main.o
  .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800100        0x0 c:/users/vts-zaposleni/downloads/ne brisati/eclipse/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
  *(.bss*)
+ .bss.t0        0x00800100        0x4 ./main.o
+                0x00800100                t0
  *(COMMON)
-                0x00800100                PROVIDE (__bss_end, .)
-                0x000000ac                __data_load_start = LOADADDR (.data)
-                0x000000ac                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800104                PROVIDE (__bss_end, .)
+                0x00000172                __data_load_start = LOADADDR (.data)
+                0x00000172                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800100        0x0
-                0x00800100                PROVIDE (__noinit_start, .)
+.noinit         0x00800104        0x0
+                0x00800104                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x00800100                PROVIDE (__noinit_end, .)
-                0x00800100                _end = .
-                0x00800100                PROVIDE (__heap_start, .)
+                0x00800104                PROVIDE (__noinit_end, .)
+                0x00800104                _end = .
+                0x00800104                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
