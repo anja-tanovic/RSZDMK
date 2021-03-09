@@ -26,7 +26,6 @@ int main(void)
 	while(1) {
 		if (t0 == 500) {
 			t0=0;
-			//PORTB = 0x00;
 			PORTB ^= 1<<5 ; //xor, invertuje stalno PB5
 		}
 	}
