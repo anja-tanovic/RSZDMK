@@ -21,7 +21,7 @@ int main(void)
 	sei(); //I = 1 (dozvola prekida)
 
 	DDRB |= 1 << 5; //PB5 je izlaz za diodu
-	PORTB |= 1<<5; //setovanje diode na 1 (led on)
+	PORTB |= 1<<5; //setovanje diode na 1 (led ON)
 
 	while(1) {
 		if (t0 == 500) {
