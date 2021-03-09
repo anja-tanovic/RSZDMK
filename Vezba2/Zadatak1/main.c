@@ -1,13 +1,20 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 //treptanje f=2Hz
-unsigned long t0=0;
+unsigned long miliseconds=0;
 
 ISR(TIMER0_COMPA_vect)
 {
-	t0++;
+	miliseconds++;
 }
 
+unsigned char my_delay(unsigned long miliseconds) {
+	if (miliseconds == 500) {
+		PORTB ^= 1<<5 ; //xor, invertuje stalno PB5
+		return 1;
+	}
+	return 0;
+}
 
 int main(void)
 {
@@ -24,9 +31,9 @@ int main(void)
 	PORTB |= 1<<5; //setovanje diode na 1 (led ON)
 
 	while(1) {
-		if (t0 == 500) {
-			t0=0;
-			PORTB ^= 1<<5 ; //xor, invertuje stalno PB5
+		if (my_delay(miliseconds)== 1) {
+			//ako je vracena 1, znaci da treba resetovati milisekunde
+			miliseconds=0;
 		}
 	}
 	return 0;
