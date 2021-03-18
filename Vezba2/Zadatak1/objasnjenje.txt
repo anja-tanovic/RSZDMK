@@ -1,0 +1,12 @@
+Zadatak1:
+
+Na masteru je konacno resenje (pod c)
+
+Na branch_a, je zadatak pod a
+Na branch_b, je zadatak pod b
+Na branch_d, je zadatak pod c
+
+Postoji konflikt za branch_c
+
+
+Tekst zadatka u "2 eclipse" folderu

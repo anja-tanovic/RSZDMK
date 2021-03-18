@@ -1,20 +1,8 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-unsigned long us = 0; //vreme
-unsigned char jacina=150; //UNETI JACINU
-
 
 ISR (TIMER0_COMPA_vect) {
-	us ++; //svakih 10us se uveca za 1
-		   //nakon cele periode imace vrednost 256
-	if (us == 255)
-		us = 0; //prosla je cela perioda, ispocetka broji
-
-	if (us <jacina) //sto je ovde broj manji, to je osvetljenost manja
-		PORTB |= 1<<5; //led on
-	else
-		PORTB &= ~(1<<5); //led off
 }
 
 int main(void) {
