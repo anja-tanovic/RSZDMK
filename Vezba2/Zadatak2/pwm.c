@@ -2,16 +2,22 @@
 #include <avr/interrupt.h>
 
 unsigned long us = 0; //vreme
-unsigned char jacina=150; //UNETI JACINU 0-255
+unsigned char fi=0; //faktor ispune koji raste
 
 
 ISR (TIMER0_COMPA_vect) {
 	us ++; //svakih 10us se uveca za 1
-		   //nakon cele periode imace vrednost 256
-	if (us == 255)
-		us = 0; //prosla je cela perioda, ispocetka broji
+		   //nakon 781 prekida treba uvecati faktor ispune
+		   //izracunato u svesci
+	if (us == 782)
+	{
+		us = 0; //proslo je 782 prekida, krece ispocetka brojanje
+				//za novi faktor ispune
+		fi++; //kad prodje jedan deo tj 781 prekid, menja se faktor ispune
+		      //kad izbroji do 255 sam se vrati na 0 jer je char
+	}
 
-	if (us <jacina) //sto je ovde broj manji, to je osvetljenost manja
+	if (us <fi) //sto je ovde broj manji, to je osvetljenost manja
 		PORTB |= 1<<5; //led on
 	else
 		PORTB &= ~(1<<5); //led off
