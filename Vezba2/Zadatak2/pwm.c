@@ -2,7 +2,7 @@
 #include <avr/interrupt.h>
 
 unsigned long us = 0; //vreme
-unsigned char jacina=150; //UNETI JACINU
+unsigned char jacina=150; //UNETI JACINU 0-255
 
 
 ISR (TIMER0_COMPA_vect) {
@@ -30,9 +30,13 @@ int main(void) {
 	TIMSK0 = 0x02;
 
 	sei();
-	//prekidi se desavaju svakih 10us, i tada se pojacava faktor ispune
+	//prekidi se desavaju svakih 10us, i tada je mogucnost da se promeni signal (u tim trenucima
+	//uticemo na faktor ispune
+	//posto se desavaju prekidi svakih 10us, a perioda je zadata da je 2,56ms
+	//to znaci da imamo 256 mogucih faktora ispune
 
 
 	while(1);
+
 	return 0;
 }
