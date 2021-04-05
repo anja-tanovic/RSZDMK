@@ -10,7 +10,7 @@
 #define PULSING_H_
 
 #include "timer0.h"
-#include "pin.h"
+#include "../pin_driver/pin.h"
 #include "util.h"
 
 /**
