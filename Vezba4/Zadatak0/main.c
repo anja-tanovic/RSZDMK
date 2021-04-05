@@ -7,7 +7,7 @@
  */
 
 #include "timer0.h"
-#include "pin.h"
+#include "../pin_driver/pin.h"
 #include "pulsing.h"
 
 /// Makro za selektovanje pina na koji je povezana dioda
